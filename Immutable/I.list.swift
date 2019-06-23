@@ -39,4 +39,12 @@ extension I {
     public static func take<A>(_ xtake: Int) -> (_ elements: [A]) -> ArraySlice<A> {
         return curry(take)(xtake)
     }
+
+    public static func filter<A>(_ function: (A) -> Bool, _ elements: [A]) -> [A] {
+        return elements.filter{ function($0) }
+    }
+
+    public static func filter<A>(_ function: @escaping (A) -> Bool) -> (_ elements: [A]) -> [A] {
+        return curry(filter)(function)
+    }
 }

@@ -81,4 +81,11 @@ class ImmutableTests: XCTestCase {
         XCTAssertEqual(I.take(1)(list), [1])
     }
 
+    func testFilter() {
+        let isEven: (Int) -> Bool = { (n: Int) in n % 2 == 0 }
+
+        XCTAssertEqual(I.filter(isEven, [1, 2, 3]), [2])
+        XCTAssertEqual(I.filter(isEven)([1, 2, 3]), [2])
+    }
+
 }
