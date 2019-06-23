@@ -23,4 +23,13 @@ open class I {
     public static func equals<T: Equatable>(_ lhs: T) -> (_ to: T) -> Bool {
         return curry(equals)(lhs)
     }
+
+    public static func map<A, B>(_ function: (A) -> B, _ functor: [A]) -> [B] {
+        return functor.map(function)
+    }
+
+    public static func map<A, B>(_ function: @escaping (A) -> B) -> (_ with: [A]) -> [B] {
+        return curry(map)(function)
+    }
+
 }

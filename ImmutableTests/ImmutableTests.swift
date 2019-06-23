@@ -30,4 +30,11 @@ class ImmutableTests: XCTestCase {
         XCTAssertFalse(I.equals(str1)(str2))
     }
 
+    func testMap() {
+        let add = I.add(1)
+
+        XCTAssertEqual(I.map(add, [1, 2]), [2, 3])
+        XCTAssertEqual(I.map(add)([1, 2]), [2, 3])
+    }
+
 }
