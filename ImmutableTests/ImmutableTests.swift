@@ -46,4 +46,39 @@ class ImmutableTests: XCTestCase {
         XCTAssertEqual(I.append("Bar")(["Foo"]), ["Foo", "Bar"])
     }
 
+    func testFirst() {
+        let list = [1, 2, 3]
+
+        let first = I.first(list)
+        first.flatMap { element in
+            XCTAssertEqual(element, 1)
+        }
+
+        let emptyList: Array<Int> = []
+        let emptyLast = I.first(emptyList)
+        XCTAssertNil(emptyLast)
+    }
+
+    func testLast() {
+        let list = [1, 2, 3]
+
+        let last = I.last(list)
+        last.flatMap { element in
+            XCTAssertEqual(element, 3)
+        }
+
+        let emptyList: Array<Int> = []
+        let emptyLast = I.last(emptyList)
+        XCTAssertNil(emptyLast)
+    }
+
+    func testTake() {
+        let list = [1, 2, 3]
+        XCTAssertEqual(I.take(1, list), [1])
+        XCTAssertEqual(I.take(2, list), [1, 2])
+        XCTAssertEqual(I.take(4, list), [1, 2, 3])
+
+        XCTAssertEqual(I.take(1)(list), [1])
+    }
+
 }

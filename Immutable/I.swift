@@ -39,4 +39,21 @@ open class I {
     public static func append<A>(_ lhs: A) -> (_ with: [A]) -> [A] {
         return curry(append)(lhs)
     }
+
+    public static func first<A>(_ elements: [A]) -> Optional<A> {
+        return elements.first
+    }
+
+    public static func last<A>(_ elements: [A]) -> Optional<A> {
+        return elements.last
+    }
+
+    public static func take<A>(_ xtake: Int, _ elements: [A]) -> ArraySlice<A> {
+        if elements.isEmpty || xtake == 0 { return [] }
+        return elements.prefix(xtake)
+    }
+
+    public static func take<A>(_ xtake: Int) -> (_ elements: [A]) -> ArraySlice<A> {
+        return curry(take)(xtake)
+    }
 }
