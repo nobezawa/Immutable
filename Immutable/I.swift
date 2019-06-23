@@ -15,4 +15,12 @@ open class I {
     public static func add<T: BasicIntType>(_ lhs: T) -> (_ to: T) -> T {
         return curry(add)(lhs)
     }
+
+    public static func equals<T: Equatable>(_ lhs: T, _ rhs: T) -> Bool {
+        return lhs == rhs
+    }
+
+    public static func equals<T: Equatable>(_ lhs: T) -> (_ to: T) -> Bool {
+        return curry(equals)(lhs)
+    }
 }
