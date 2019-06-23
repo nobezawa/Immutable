@@ -37,4 +37,13 @@ class ImmutableTests: XCTestCase {
         XCTAssertEqual(I.map(add)([1, 2]), [2, 3])
     }
 
+    func testAppend() {
+
+        XCTAssertEqual(I.append(1, [2]), [2, 1])
+        XCTAssertEqual(I.append("Bar", ["Foo"]), ["Foo", "Bar"])
+
+        XCTAssertEqual(I.append(1)([2]), [2, 1])
+        XCTAssertEqual(I.append("Bar")(["Foo"]), ["Foo", "Bar"])
+    }
+
 }

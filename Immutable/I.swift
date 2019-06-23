@@ -32,4 +32,11 @@ open class I {
         return curry(map)(function)
     }
 
+    public static func append<A>(_ lhs: A, _ rhs: [A]) -> [A] {
+        return rhs + [lhs]
+    }
+
+    public static func append<A>(_ lhs: A) -> (_ with: [A]) -> [A] {
+        return curry(append)(lhs)
+    }
 }
