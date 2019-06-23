@@ -19,4 +19,15 @@ class ImmutableTests: XCTestCase {
         XCTAssertEqual(I.add(one)(two), 3)
     }
 
+    func testEquals() {
+        let str1 = "1"
+        let str2 = "2"
+
+        XCTAssertTrue(I.equals(str1, str1))
+        XCTAssertFalse(I.equals(str1, str2))
+
+        XCTAssertTrue(I.equals(str1)(str1))
+        XCTAssertFalse(I.equals(str1)(str2))
+    }
+
 }
