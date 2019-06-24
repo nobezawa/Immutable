@@ -88,4 +88,12 @@ class ImmutableTests: XCTestCase {
         XCTAssertEqual(I.filter(isEven)([1, 2, 3]), [2])
     }
 
+    func testAll() {
+        let three = I.equals(3)
+
+        XCTAssertTrue(I.all(three, [3, 3, 3]))
+        XCTAssertFalse(I.all(three, [3, 2, 3]))
+        XCTAssertTrue(I.all(three)([3, 3, 3]))
+        XCTAssertFalse(I.all(three)([3, 2, 3]))
+    }
 }

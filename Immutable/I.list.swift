@@ -47,4 +47,12 @@ extension I {
     public static func filter<A>(_ function: @escaping (A) -> Bool) -> (_ elements: [A]) -> [A] {
         return curry(filter)(function)
     }
+
+    public static func all<A>(_ function: @escaping (A) -> Bool, _ elements: [A]) -> Bool {
+        return elements.allSatisfy(function)
+    }
+
+    public static func all<A>(_ function: @escaping (A) -> Bool) -> (_ elements: [A]) -> Bool {
+        return curry(all)(function)
+    }
 }
