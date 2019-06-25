@@ -96,4 +96,11 @@ class ImmutableTests: XCTestCase {
         XCTAssertTrue(I.all(three)([3, 3, 3]))
         XCTAssertFalse(I.all(three)([3, 2, 3]))
     }
+
+    func testBind() {
+        let add1 = I.add(1)
+        let add2 = I.add(2)
+
+        XCTAssertEqual((add1 >>> add2)(1), 4)
+    }
 }
