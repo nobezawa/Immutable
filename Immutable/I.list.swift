@@ -55,4 +55,12 @@ extension I {
     public static func all<A>(_ function: @escaping (A) -> Bool) -> (_ elements: [A]) -> Bool {
         return curry(all)(function)
     }
+
+    public static func find<A>(_ function: @escaping (A) -> Bool, _ elements: [A]) -> A? {
+        return elements.first(where: { function($0) } )
+    }
+
+    public static func find<A>(_ function: @escaping (A) -> Bool) ->  (_ elements: [A]) -> A? {
+        return curry(find)(function)
+    }
 }

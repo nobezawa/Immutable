@@ -103,4 +103,12 @@ class ImmutableTests: XCTestCase {
 
         XCTAssertEqual((add1 >>> add2)(1), 4)
     }
+
+    func testFind() {
+        let elements = [1, 2, 3]
+        let equal = I.equals(1)
+
+        let data = I.find(equal, elements)
+        data.flatMap { XCTAssertEqual($0, 1) }
+    }
 }
