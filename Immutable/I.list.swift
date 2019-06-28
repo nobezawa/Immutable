@@ -40,6 +40,17 @@ extension I {
         return curry(take)(xtake)
     }
 
+    public static func drop<A>(_ index: Int, _ elements: [A]) -> [A] {
+        if elements.isEmpty || index == 0 { return [] }
+        var copyElements = elements
+        copyElements.remove(at: (index - 1))
+        return copyElements
+    }
+
+    public static func drop<A>(_ index: Int) -> (_ elements: [A]) -> [A] {
+        return curry(drop)(index)
+    }
+
     public static func filter<A>(_ function: (A) -> Bool, _ elements: [A]) -> [A] {
         return elements.filter{ function($0) }
     }
