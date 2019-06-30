@@ -74,4 +74,12 @@ extension I {
     public static func find<A>(_ function: @escaping (A) -> Bool) ->  (_ elements: [A]) -> A? {
         return curry(find)(function)
     }
+
+    public static func concat<A>(_ elements: [A]...) -> [A] {
+        var result: [A] = []
+        for list in elements {
+            result = result + list
+        }
+        return result
+    }
 }

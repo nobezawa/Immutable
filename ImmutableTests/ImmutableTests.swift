@@ -121,4 +121,11 @@ class ImmutableTests: XCTestCase {
         let data = I.find(equal, elements)
         data.flatMap { XCTAssertEqual($0, 1) }
     }
+
+    func testConcat() {
+        let list1 = [1, 2, 3]
+        let list2 = [4, 5, 6]
+
+        XCTAssertEqual(I.concat(list1, list2), [1, 2, 3, 4, 5, 6])
+    }
 }
