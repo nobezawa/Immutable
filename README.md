@@ -25,6 +25,14 @@ let list = [1, 2, 3]
 
 print(I.take(1, list))
 // => [1]
+
+let add1 = I.add(1)
+let add2 = I.add(2)
+
+let add3 = (add1 >>> add2)
+
+print((add3)(1))
+// => 4
 ```
 
 ## License
