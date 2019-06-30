@@ -4,5 +4,5 @@ xcode_project: Immutable.xcodeproj
 xcode_scheme: Immutable
 xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
 script:
-- xcodebuild test -scheme Immutable
+- xcodebuild test -scheme Immutable CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
