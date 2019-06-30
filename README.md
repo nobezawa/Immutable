@@ -4,7 +4,7 @@ Immutable
 Immutable is an practical functional library for Swift.
 
 ## Description
-Inspiration / [ramda](https://github.com/ramda/ramda) / [immutable-js](https://github.com/immutable-js/immutable-js)
+Inspiration / [ramda](https://github.com/ramda/ramda) / [immutable-js](https://github.com/immutable-js/immutable-js)  
 Immutable provides immutable function and currying function.
 
 ## Authors
