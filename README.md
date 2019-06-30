@@ -1,6 +1,8 @@
 Immutable
 =========
 
+[![Build Status](https://travis-ci.org/nobezawa/Immutable.svg?branch=master)](https://travis-ci.org/nobezawa/Immutable)
+
 Immutable is an practical functional library for Swift.
 
 ## Description
