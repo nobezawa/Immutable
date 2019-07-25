@@ -28,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		3F94E27F3902BDAD974366FA /* I.list.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I.list.swift; sourceTree = "<group>"; };
+		3F94E78F63C3EDD795004FC4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3F94E99608CE6EF60B7F29FB /* I.curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I.curry.swift; sourceTree = "<group>"; };
 		3F94ECA9AA331A574BD2845F /* I.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I.swift; sourceTree = "<group>"; };
 		3F94EE2BD442CFF8FA75F805 /* BasicIntType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicIntType.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 				6E6553EE22BF115A001A4FA0 /* Immutable */,
 				6E6553F922BF115A001A4FA0 /* ImmutableTests */,
 				6E6553ED22BF115A001A4FA0 /* Products */,
+				3F94E78F63C3EDD795004FC4 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -357,9 +359,10 @@
 		6E65540122BF115A001A4FA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -372,6 +375,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cste.jp.Immutable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -381,9 +385,10 @@
 		6E65540222BF115A001A4FA0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -396,6 +401,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cste.jp.Immutable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -405,7 +411,9 @@
 		6E65540422BF115A001A4FA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImmutableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,6 +422,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cste.jp.ImmutableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -422,7 +431,9 @@
 		6E65540522BF115A001A4FA0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImmutableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -431,6 +442,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cste.jp.ImmutableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -90,6 +90,10 @@ class ImmutableTests: XCTestCase {
         let list = [1, 2, 3]
         XCTAssertEqual(I.drop(1, list), [2, 3])
         XCTAssertEqual(I.drop(2)(list), [1, 3])
+        XCTAssertEqual(I.drop(0)(list), [])
+
+        let emptyList: [Int] = []
+        XCTAssertEqual(I.drop(3)(emptyList), [])
     }
 
     func testFilter() {
