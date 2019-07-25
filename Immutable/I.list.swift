@@ -23,6 +23,14 @@ extension I {
         return curry(append)(lhs)
     }
 
+    public static func prepend<A>(_ lhs: A, _ rhs: [A]) -> [A] {
+        return [lhs] + rhs
+    }
+
+    public static func prepend<A>(_ lhs: A) -> (_ with: [A]) -> [A] {
+        return curry(prepend)(lhs)
+    }
+
     public static func first<A>(_ elements: [A]) -> Optional<A> {
         return elements.first
     }
