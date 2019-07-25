@@ -99,6 +99,13 @@ class ImmutableTests: XCTestCase {
         XCTAssertEqual(I.filter(isEven)([1, 2, 3]), [2])
     }
 
+    func testReject() {
+        let isEven: (Int) -> Bool = { (n: Int) in n % 2 == 0 }
+
+        XCTAssertEqual(I.reject(isEven, [1, 2, 3]), [1, 3])
+        XCTAssertEqual(I.reject(isEven)([1, 2, 3]), [1, 3])
+    }
+
     func testAll() {
         let three = I.equals(3)
 

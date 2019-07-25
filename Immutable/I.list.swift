@@ -67,6 +67,14 @@ extension I {
         return curry(filter)(function)
     }
 
+    public static func reject<A>(_ function: (A) -> Bool, _ elements: [A]) -> [A] {
+        return elements.filter{ !function($0) }
+    }
+
+    public static func reject<A>(_ function: @escaping (A) -> Bool) -> (_ elements: [A]) -> [A] {
+        return curry(reject)(function)
+    }
+
     public static func all<A>(_ function: @escaping (A) -> Bool, _ elements: [A]) -> Bool {
         return elements.allSatisfy(function)
     }
