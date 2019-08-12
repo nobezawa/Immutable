@@ -59,6 +59,12 @@ extension I {
         return curry(drop)(index)
     }
 
+    public static func dropFirst<A>(_ elements: [A]) -> [A] {
+        if elements.isEmpty { return [] }
+        let tail = elements.dropFirst()
+        return Array(tail)
+    }
+
     public static func filter<A>(_ function: (A) -> Bool, _ elements: [A]) -> [A] {
         return elements.filter{ function($0) }
     }
