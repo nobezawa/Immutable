@@ -37,6 +37,24 @@ print((add3)(1))
 // => 4
 ```
 
+## Support
+
+- add
+- equals
+- map
+- append
+- prepend
+- first
+- last
+- take
+- drop
+- filter
+- reject
+- all
+- bind
+- find
+- concat
+
 ## License
 
 Immutable is available under the MIT license.
