@@ -35,6 +35,16 @@ extension I {
         return elements.first
     }
 
+    public static func head<A>(_ elements: [A]) -> Optional<A> {
+        return elements.first
+    }
+
+    public static func tail<A>(_ elements: [A]) -> [A] {
+        if elements.isEmpty { return [] }
+        let tail = elements.dropFirst()
+        return Array(tail)
+    }
+
     public static func last<A>(_ elements: [A]) -> Optional<A> {
         return elements.last
     }
@@ -57,6 +67,18 @@ extension I {
 
     public static func drop<A>(_ index: Int) -> (_ elements: [A]) -> [A] {
         return curry(drop)(index)
+    }
+
+    public static func dropFirst<A>(_ elements: [A]) -> [A] {
+        if elements.isEmpty { return [] }
+        let tail = elements.dropFirst()
+        return Array(tail)
+    }
+
+    public static func dropLast<A>(_ elements: [A]) -> [A] {
+        if elements.isEmpty { return [] }
+        let list = elements.dropLast()
+        return Array(list)
     }
 
     public static func filter<A>(_ function: (A) -> Bool, _ elements: [A]) -> [A] {
