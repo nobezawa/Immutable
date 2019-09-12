@@ -35,6 +35,16 @@ extension I {
         return elements.first
     }
 
+    public static func head<A>(_ elements: [A]) -> Optional<A> {
+        return elements.first
+    }
+
+    public static func tail<A>(_ elements: [A]) -> [A] {
+        if elements.isEmpty { return [] }
+        let tail = elements.dropFirst()
+        return Array(tail)
+    }
+
     public static func last<A>(_ elements: [A]) -> Optional<A> {
         return elements.last
     }
