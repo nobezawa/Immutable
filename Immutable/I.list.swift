@@ -75,6 +75,12 @@ extension I {
         return Array(tail)
     }
 
+    public static func dropLast<A>(_ elements: [A]) -> [A] {
+        if elements.isEmpty { return [] }
+        let list = elements.dropLast()
+        return Array(list)
+    }
+
     public static func filter<A>(_ function: (A) -> Bool, _ elements: [A]) -> [A] {
         return elements.filter{ function($0) }
     }

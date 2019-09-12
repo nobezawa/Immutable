@@ -104,6 +104,14 @@ class ImmutableTests: XCTestCase {
         XCTAssertEqual(I.dropFirst(list2), [])
     }
 
+    func testDropLast() {
+        let list = [1, 2, 3]
+        XCTAssertEqual(I.dropLast(list), [1, 2])
+
+        let list2: [Int] = []
+        XCTAssertEqual(I.dropLast(list2), [])
+    }
+
     func testFilter() {
         let isEven: (Int) -> Bool = { (n: Int) in n % 2 == 0 }
 
