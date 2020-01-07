@@ -113,6 +113,13 @@ extension I {
         return curry(find)(function)
     }
 
+    public static func replace<A>(_ function: @escaping (A) -> Bool, _ elements: [A], _ element: A) -> [A] {
+        guard let index = elements.firstIndex(where: function) else { return elements }
+        var copyElements = elements
+        copyElements[index] = element
+        return copyElements
+    }
+
     public static func concat<A>(_ elements: [A]...) -> [A] {
         var result: [A] = []
         for list in elements {

@@ -150,6 +150,13 @@ class ImmutableTests: XCTestCase {
         data.flatMap { XCTAssertEqual($0, 1) }
     }
 
+    func testReplace() {
+        let elements = [1, 2, 3]
+        let equal = I.equals(2)
+
+        XCTAssertEqual(I.replace(equal, elements, 4), [1, 4, 3])
+    }
+
     func testConcat() {
         let list1 = [1, 2, 3]
         let list2 = [4, 5, 6]
