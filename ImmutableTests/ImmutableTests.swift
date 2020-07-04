@@ -163,4 +163,12 @@ class ImmutableTests: XCTestCase {
 
         XCTAssertEqual(I.concat(list1, list2), [1, 2, 3, 4, 5, 6])
     }
+
+    func testMove() {
+        let elements = [1, 2, 3, 4]
+
+        XCTAssertEqual(I.move(0, 2, elements), [2, 3, 1, 4])
+        XCTAssertEqual(I.move(-1, 0, elements), [4, 1, 2, 3])
+        XCTAssertEqual(I.move(5, 0, elements), [1, 2, 3, 4])
+    }
 }

@@ -127,4 +127,18 @@ extension I {
         }
         return result
     }
+
+    public static func move<A>(_ from: Int, _ to: Int,  _ elements: [A]) -> [A] {
+        let length = elements.count
+        let positiveFrom = from < 0 ? length + from : from
+        let positiveTo = to < 0 ? length + to : to
+
+        if positiveFrom < 0 || positiveFrom >= elements.count || positiveTo  < 0 || positiveTo >= elements.count { return elements }
+
+        let element = elements[positiveFrom]
+        var copyElements = elements
+        copyElements.remove(at: positiveFrom)
+        copyElements.insert(element, at: positiveTo)
+        return copyElements
+    }
 }
