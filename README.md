@@ -54,6 +54,7 @@ print((add3)(1))
 - bind
 - find
 - concat
+- move
 
 ## License
 
